@@ -5,6 +5,8 @@ import { DirecteurLayoutComponent } from './directeur-layout/directeur-layout.co
 import { ConsultantLayoutComponent } from './consultant-layout/consultant-layout.component';
 import { AssistantLayoutComponent } from './assistant-layout/assistant-layout.component';
 import { ClientLayoutComponent } from './client-layout/client-layout.component';
+import { AuthAdminLayoutComponent } from './auth-admin-layout/auth-admin-layout.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -14,10 +16,12 @@ import { ClientLayoutComponent } from './client-layout/client-layout.component';
     DirecteurLayoutComponent,
     ConsultantLayoutComponent,
     AssistantLayoutComponent,
-    ClientLayoutComponent
+    ClientLayoutComponent,
+    AuthAdminLayoutComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class LayoutsModule { }

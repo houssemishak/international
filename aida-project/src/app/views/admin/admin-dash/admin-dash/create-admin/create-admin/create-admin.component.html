@@ -1,0 +1,75 @@
+<style>
+    .custom-container {
+      max-width: 500px; /* Ajustez la largeur du conteneur selon vos besoins */
+      margin: auto; /* Centrer le conteneur horizontalement */
+      padding: 20px; /* Ajouter un peu d'espace intérieur au conteneur */
+      overflow: auto;
+    }
+  
+    .custom-form {
+      font-size: 16px; /* Ajustez la taille de la police du formulaire */
+    }
+  
+    .custom-input {
+      width: 70%; /* Utilisez la largeur maximale pour les champs de saisie */
+      margin-bottom: 12px; /* Ajoutez un peu d'espace entre les champs de saisie */
+    }
+  
+    .custom-button {
+      font-size: 16px; /* Ajustez la taille de la police du bouton */
+      padding: 10px 20px; /* Ajustez la taille du bouton */
+      width: 20%;
+      float: right;
+    }
+  </style>
+  
+  <div class="container custom-container border mt-5">
+    <h2 class="text-center mb-4">Création d'un admin</h2>
+    <form class="custom-form">
+      <div class="row mb-3">
+        <label for="inputNom3" class="col-sm-2 col-form-label">Nom</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control custom-input" id="inputEmail3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPrenom3" class="col-sm-2 col-form-label">Prénom</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control custom-input" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputEmail3" class="col-sm-2 col-form-label">E-mail</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control custom-input" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputTel3" class="col-sm-2 col-form-label">Téléphone</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control custom-input" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPays3" class="col-sm-2 col-form-label">Pays</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control custom-input" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Mot de Passe</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control custom-input" id="inputPassword3">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Confirmer mot de passe</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control custom-input" id="inputPassword3">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary custom-button">Créer</button>
+    </form>
+    <router-outlet></router-outlet>
+  </div>
+  
