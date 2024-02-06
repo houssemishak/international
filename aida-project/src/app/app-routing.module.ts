@@ -13,7 +13,8 @@ const routes: Routes = [
 
   {path:'admin',component:AdminLayoutComponent,
   children:[
-  {path:'admin-dash',loadChildren:()=>import('./views/admin/admin-dash/admin-dash.module').then(m=>m.AdminDashModule)}
+  {path:'admin-dash',loadChildren:()=>import('./views/admin/admin-dash/admin-dash.module').then(m=>m.AdminDashModule)},
+  {path:'directeur-dash',loadChildren:()=>import('./views/admin/directeur-dash/directeur-dash.module').then(m=>m.DirecteurDashModule)}
   ]},
 
   {path:'assistant',component:AssistantLayoutComponent},

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UpdateAdminComponent } from './update-admin/update-admin.component';
+import { CreateDirecteurComponent } from './create-directeur/create-directeur.component';
 
 const routes: Routes = [
-  {path:'',component:UpdateAdminComponent}
+  {path:'',component:CreateDirecteurComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class UpdateAdminRoutingModule { }
+export class CreateDirecteurRoutingModule { }

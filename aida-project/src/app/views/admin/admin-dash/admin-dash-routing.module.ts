@@ -6,9 +6,7 @@ const routes: Routes = [
   {path:'',component:AdminDashComponent,
 children:[
   {path:'create-admin',loadChildren:()=>import('./admin-dash/create-admin/create-admin.module').then(m=>m.CreateAdminModule)},
-  {path:'update-admin',loadChildren:()=>import('./admin-dash/update-admin/update-admin.module').then(m=>m.UpdateAdminModule)},
-  {path:'profil-admin',loadChildren:()=>import('./admin-dash/profil-admin/profil-admin.module').then(m=>m.ProfilAdminModule)},
-  {path:'delete-admin',loadChildren:()=>import('./admin-dash/delete-admin/delete-admin.module').then(m=>m.DeleteAdminModule)}
+  {path:'list-admin',loadChildren:()=>import('./admin-dash/list-admin/list-admin.module').then(m=>m.ListAdminModule)}
 ]}
 ];
 

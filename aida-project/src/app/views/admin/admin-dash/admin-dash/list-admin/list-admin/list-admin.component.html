@@ -1,0 +1,100 @@
+<style>
+  .custom-button {
+      width: 100px; /* Ajustez la largeur selon vos besoins */
+  }
+  .m-0.font-weight-bold{
+    color: #2D5882;
+    font-size:xx-large
+  }
+  th{
+    color:#1c92c9;
+    font-size: large;
+    text-align: center;
+  }
+  td{
+    align-items: center;
+    text-align: center;
+  }
+  #dataTable td {
+        align-items: center;
+        text-align: center;
+        font-weight: bold; /* Applique le style en gras aux cellules du tableau */
+    }
+    /* Ajout de styles personnalisés pour la bordure plus épaisse */
+    #dataTable.table-bordered th,
+    #dataTable.table-bordered td {
+        border: 1px solid #000; /* 2px pour une bordure plus épaisse, ajustez selon vos préférences */
+    }
+   
+
+
+</style>
+
+
+
+<div class="container-fluid">
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+  <div class="card-header py-3 text-center">
+      <h6 class="m-0 font-weight-bold">Liste des Admins</h6>
+      <button type="submit" class="btn btn-primary btn-sm float-right custom-button">Ajouter</button>
+  </div>
+  
+  <div class="input-group rounded col-md-3 text-left">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+      <span class="input-group-text border-0" id="search-addon">
+          <i class="fas fa-search"></i>
+      </span>
+  </div>
+    <div class="card-body">
+          <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                      <tr>
+                          <th>Nom et Prénom</th>
+                          <th>E-mail</th>
+                          <th>Actions</th>
+                          
+                      </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            <i class="fas fa-eye text-primary mr-2"></i> <!-- Icône de display en bleu -->
+                            <i class="fas fa-edit text-primary mr-2"></i> <!-- Icône edit en bleu -->
+                            <i class="fas fa-times-circle text-danger"></i> <!-- Cercle times en rouge -->
+                        </td>
+                          
+                      </tr>
+                      <tr>
+                          <td></td>
+                          <td></td>
+                          <td>
+                            <i class="fas fa-eye text-primary mr-2"></i> <!-- Icône de display en bleu -->
+                            <i class="fas fa-edit text-primary mr-2"></i> <!-- Icône edit en bleu -->
+                            <i class="fas fa-times-circle text-danger"></i> <!-- Cercle times en rouge -->
+                        </td>
+                          
+                      </tr>
+
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                          <i class="fas fa-eye text-primary mr-2"></i> <!-- Icône de display en bleu -->
+                          <i class="fas fa-edit text-primary mr-2"></i> <!-- Icône edit en bleu -->
+                          <i class="fas fa-times-circle text-danger"></i> <!-- Cercle times en rouge -->
+                      </td>
+                        
+                    </tr>
+                      
+                  </tbody>
+              </table>
+              <button type="submit" class="btn btn-primary btn-sm float-right custom-button">Télécharger</button>
+          </div>
+      </div>
+  </div>
+
+</div>
