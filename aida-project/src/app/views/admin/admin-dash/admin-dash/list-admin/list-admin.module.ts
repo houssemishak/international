@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ListAdminRoutingModule } from './list-admin-routing.module';
 import { ListAdminComponent } from './list-admin/list-admin.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +11,8 @@ import { ListAdminComponent } from './list-admin/list-admin.component';
   ],
   imports: [
     CommonModule,
-    ListAdminRoutingModule
+    ListAdminRoutingModule,
+    FormsModule
   ]
 })
 export class ListAdminModule { }

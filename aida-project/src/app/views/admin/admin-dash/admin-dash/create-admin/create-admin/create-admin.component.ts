@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./create-admin.component.css']
 })
 export class CreateAdminComponent {
-
+  motDePasse: string = '';  // Initialisez avec une valeur par défaut
+  confirmationMotDePasse: string = '';
 }

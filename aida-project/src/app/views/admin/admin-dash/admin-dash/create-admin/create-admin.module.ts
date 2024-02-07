@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CreateAdminRoutingModule } from './create-admin-routing.module';
 import { CreateAdminComponent } from './create-admin/create-admin.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { CreateAdminComponent } from './create-admin/create-admin.component';
   ],
   imports: [
     CommonModule,
-    CreateAdminRoutingModule
+    CreateAdminRoutingModule,
+    FormsModule
   ]
 })
 export class CreateAdminModule { }

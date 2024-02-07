@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-admin.component.css']
 })
 export class ListAdminComponent {
-
+  motDePasse: string = '';  // Initialisez avec une valeur par défaut
+  confirmationMotDePasse: string = '';
 }
