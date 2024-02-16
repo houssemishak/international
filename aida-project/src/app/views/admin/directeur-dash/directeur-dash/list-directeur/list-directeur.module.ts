@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ListDirecteurRoutingModule } from './list-directeur-routing.module';
 import { ListDirecteurComponent } from './list-directeur/list-directeur.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { ListDirecteurComponent } from './list-directeur/list-directeur.componen
   ],
   imports: [
     CommonModule,
-    ListDirecteurRoutingModule
+    ListDirecteurRoutingModule,
+    FormsModule
   ]
 })
 export class ListDirecteurModule { }

@@ -1,0 +1,113 @@
+<style>
+    .custom-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px;
+      overflow: auto;
+  
+    }
+  
+    input {
+      width: 95%;
+      /* Adjusted to use the full width of the parent container */
+      margin-bottom: 20px;
+      height: 40px;
+    }
+  
+    .btn-primary {
+      font-size: 16px;
+      padding: 10px 20px;
+      width: 120px;
+      /* Adjusted to use the full width of the parent container */
+      margin-top: 20px;
+      /* Added margin at the top of the button */
+      position: absolute;
+      right: 125px;
+    }
+  </style>
+  
+  <div class="container custom-container border mt-5 ">
+    <h2 class="text-center mb-4">Création d'un compte client</h2>
+    <div ng-app="sample">
+      <form class="form-horizontal" name="registerForm">
+        <div class="form-row">
+          <!-- Nom -->
+          <div class="col-md-4 form-group"
+            ng-class="{'has-error': registerForm.$dirty && registerForm.Nom.$invalid, 'has-success': registerForm.Nom.$valid}">
+            <label for="validationCustom01">Nom</label>
+            <input type="text" class="form-control" id="validationCustom01" placeholder="Tapez votre nom" required
+              name="Nom" ng-model="Nom" />
+            <div class="invalid-feedback" ng-messages="registerForm.Nom.$error" ng-if="registerForm.$dirty">
+              <span ng-message="required">Ce champ est obligatoire.</span>
+            </div>
+            <div class="valid-feedback">
+              Valide!
+            </div>
+            <!-- Prénom -->
+  
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Prénom</label>
+            <input type="text" class="form-control" id="validationCustom02" placeholder="Tapez votre prénom" required>
+            <div class="valid-feedback">
+              Valide!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom03">E-mail</label>
+            <input type="email" class="form-control" id="validationCustom03" placeholder="Tapez votre E-mail" required>
+            <div class="valid-feedback">
+              Valide!
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom04">Adresse</label>
+            <input type="text" class="form-control" id="validationCustom04" placeholder="Tapez votre adresse" required>
+            <div class="invalid-feedback">
+              Valide!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom05">Pays</label>
+            <input type="text" class="form-control" id="validationCustom05" placeholder="Pays" required>
+            <div class="invalid-feedback">
+              Valide!
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom06">Téléphone</label>
+            <input type="text" class="form-control" id="validationCustom06" placeholder="Tapez votre N° de téléphone"
+              required>
+            <div class="invalid-feedback">
+              Valide!
+            </div>
+          </div>
+        </div>
+  
+        <div class="form-row">
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom07">Mot de passe (au moins 8 caractères)</label>
+            <input type="password" class="form-control" id="validationCustom07" placeholder="Tapez votre mot de passe"
+              required minlength="8" [(ngModel)]="motDePasse">
+            <div class="invalid-feedback">
+              Le mot de passe doit contenir au moins 8 caractères.
+            </div>
+          </div>
+          <!-- Confirmation du mot de passe -->
+          <div class="col-md-4 mb-3">
+            <label for="validationCustom08">Confirmer le mot de passe</label>
+            <input type="password" class="form-control" id="validationCustom08"
+              placeholder="Confirmer votre mot de passe" [(ngModel)]="confirmationMotDePasse"
+              [ngClass]="{'password-mismatch': motDePasse !== confirmationMotDePasse}">
+            <div class="invalid-feedback">
+              Les mots de passe ne correspondent pas.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Créer</button>
+      </form>
+    </div>
+    <router-outlet></router-outlet>
+  </div>

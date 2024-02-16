@@ -1,0 +1,228 @@
+<style>
+    .custom-button {
+        width: 100px; /* Ajustez la largeur selon vos besoins */
+    }
+    .m-0.font-weight-bold{
+      color: #2D5882;
+      font-size:xx-large
+    }
+    th{
+      color:#1c92c9;
+      font-size: large;
+      text-align: center;
+    }
+    td{
+      align-items: center;
+      text-align: center;
+    }
+    #dataTable td {
+          align-items: center;
+          text-align: center;
+          font-weight: bold; /* Applique le style en gras aux cellules du tableau */
+      }
+      /* Ajout de styles personnalisés pour la bordure plus épaisse */
+      #dataTable.table-bordered th,
+      #dataTable.table-bordered td {
+          border: 1px solid #000; /* 2px pour une bordure plus épaisse, ajustez selon vos préférences */
+      }
+     
+     .text-center.mb-4{
+      color: #2D5882;
+     }
+     label{
+      color:black;
+     }
+  
+    .col-sm h6{
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+    .modal-confirm {
+    color: #636363;
+    width: 400px;
+  }
+  .modal-confirm .modal-content {
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+  }
+  .modal-confirm .modal-header {
+    border-bottom: none;
+    position: relative;
+  }
+  .modal-confirm h4 {
+    text-align: center;
+    font-size: 26px;
+    margin: 30px 0 -10px;
+  }
+  .modal-confirm .close {
+    position: absolute;
+    top: -5px;
+    right: -2px;
+  }
+  .modal-confirm .modal-body {
+    color: #999;
+  }
+  .modal-confirm .modal-footer {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px 15px 25px;
+  }
+  .modal-confirm .modal-footer a {
+    color: #999;
+  }
+  .modal-confirm .icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 9;
+    text-align: center;
+    border: 3px solid #f15e5e;
+  }
+  .modal-confirm .icon-box i {
+    color: #f15e5e;
+    font-size: 46px;
+    display: inline-block;
+    margin-top: 13px;
+  }
+  .modal-confirm .btn {
+    color: #fff;
+    border-radius: 4px;
+    background: #60c7c1;
+    text-decoration: none;
+    transition: all 0.4s;
+    line-height: normal;
+    min-width: 120px;
+    border: none;
+    min-height: 40px;
+    border-radius: 3px;
+    margin: 0 5px;
+    outline: none !important;
+  }
+  
+  #validationCustom01{
+    width: 400px;
+  }
+  
+     
+  
+  
+  </style>
+  
+  
+  
+  <div class="container-fluid">
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3 text-center">
+        <h6 class="m-0 font-weight-bold">Liste des Projets</h6>
+        <button type="submit" class="btn btn-primary btn-sm float-right custom-button" data-bs-toggle="modal" data-bs-target="#ModalCreate">Ajouter</button>
+    </div>
+    
+    <div class="input-group rounded col-md-3 text-left">
+        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <span class="input-group-text border-0" id="search-addon">
+            <i class="fas fa-search"></i>
+        </span>
+    </div>
+      <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Nom du projet</th>
+                            <th>Actions</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                            <td></td>
+                            <td>
+                              <i class="fas fa-eye text-primary mr-2"></i> <!-- Icône de display en bleu -->
+                              <i class="fas fa-edit text-primary mr-2"></i> <!-- Icône edit en bleu -->
+                              <i class="fas fa-times-circle text-danger"></i> <!-- Cercle times en rouge -->
+                          </td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                              <i class="fas fa-eye text-primary mr-2"></i> <!-- Icône de display en bleu -->
+                              <i class="fas fa-edit text-primary mr-2"></i> <!-- Icône edit en bleu -->
+                              <i class="fas fa-times-circle text-danger"></i> <!-- Cercle times en rouge -->
+                          </td>
+                            
+                        </tr>
+  
+                        <tr>
+                          <td></td>
+                          <td>
+                            <i class="fas fa-eye text-primary mr-2"></i> <!-- Icône de display en bleu -->
+                            <i class="fas fa-edit text-primary mr-2"></i> <!-- Icône edit en bleu -->
+                            <i class="fas fa-times-circle text-danger"></i> <!-- Cercle times en rouge -->
+                        </td>
+                          
+                      </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  
+  </div>
+
+
+  <!--Modal pour la creation du projet-->
+  <div class="modal fade" id="ModalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <i class="fas fa-times-circle text-danger" id="closeM" data-bs-dismiss="modal"></i>
+          <h2 class="text-center mb-4">Ajouter un projet</h2>
+          
+        
+  
+          <!--update form-->
+          <div class="container custom-container border mt-5 ">
+            <div ng-app="sample">
+              <form class="form-horizontal" name="registerForm">
+                  <!-- Nom -->
+                  <div class="col-md-4 form-group"
+                    ng-class="{'has-error': registerForm.$dirty && registerForm.Nom.$invalid, 'has-success': registerForm.Nom.$valid}">
+                    <label for="validationCustom01"></label>
+                    <input type="text" class="form-control" id="validationCustom01" required
+                      name="Nom" ng-model="Nom" />
+                    <div class="invalid-feedback" ng-messages="registerForm.Nom.$error" ng-if="registerForm.$dirty">
+                      <span ng-message="required">Ce champ est obligatoire.</span>
+                    </div>
+                    <div class="valid-feedback">
+                      Valide!
+                    </div>
+                    <!-- Prénom -->
+          
+                  
+                  
+                </div>
+              </form>
+            </div>
+            <router-outlet></router-outlet>
+          </div>
+  
+  
+          <!--end update-->
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="btn btn-primary btn-sm custom-button">Ajouter</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!---->

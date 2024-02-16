@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-directeur.component.css']
 })
 export class ListDirecteurComponent {
-
+  motDePasse: string = '';  // Initialisez avec une valeur par défaut
+  confirmationMotDePasse: string = '';
 }

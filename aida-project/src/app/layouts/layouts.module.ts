@@ -7,6 +7,8 @@ import { AssistantLayoutComponent } from './assistant-layout/assistant-layout.co
 import { ClientLayoutComponent } from './client-layout/client-layout.component';
 import { AuthAdminLayoutComponent } from './auth-admin-layout/auth-admin-layout.component';
 import { RouterModule } from '@angular/router';
+import { ResetPasswordLayoutComponent } from './reset-password-layout/reset-password-layout.component';
+import { AuthClientLayoutComponent } from './auth-client-layout/auth-client-layout.component';
 
 
 
@@ -17,7 +19,9 @@ import { RouterModule } from '@angular/router';
     ConsultantLayoutComponent,
     AssistantLayoutComponent,
     ClientLayoutComponent,
-    AuthAdminLayoutComponent
+    AuthAdminLayoutComponent,
+    ResetPasswordLayoutComponent,
+    AuthClientLayoutComponent
   ],
   imports: [
     CommonModule,

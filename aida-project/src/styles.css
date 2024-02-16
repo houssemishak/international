@@ -144,5 +144,16 @@
     background-color: #2D5882; /* Remplacez #ff0000 par le code hexadécimal de la couleur souhaitée */
   }
   
+  .logologin{
+    top:10px;
+    position:absolute;
+    left: 10px;
+  }
+  @media only screen and (max-width: 600px) {
+    /* Adjust styles for screens smaller than 600px */
+    .logologin {
+        display: none;
+    }
+  }
 
  
